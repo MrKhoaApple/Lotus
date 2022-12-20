@@ -101,6 +101,7 @@ public class RateApi {
 		}
 		Rate p = rateRepository.findById(id).get();
 		p.setStatus(false);
+
 		rateRepository.save(p);
 		// repo.deleteById(id);
 		return ResponseEntity.ok().build();

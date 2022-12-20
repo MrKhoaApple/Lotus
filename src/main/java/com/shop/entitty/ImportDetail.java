@@ -11,14 +11,18 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "import")
-public class Import {
+@Table(name = "importDetail")
+public class ImportDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalDate importDate;
-    private Double totalAmount;
+    private LocalDate expireDate;
+    private int quantityImport;
+    private Double priceImport;
     @ManyToOne
-    @JoinColumn(name = "vendorId")
-    private Vendor vendor;
+    @JoinColumn(name = "importId")
+    private Import anImport;
+    @ManyToOne
+    @JoinColumn(name = "productId")
+    private Product product;
 }

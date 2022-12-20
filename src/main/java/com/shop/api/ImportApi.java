@@ -1,15 +1,18 @@
 package com.shop.api;
 
 import com.shop.entitty.Import;
+import com.shop.entitty.ImportDetail;
 import com.shop.entitty.Product;
-import com.shop.entitty.User;
+import com.shop.repository.ImportDetailRepository;
 import com.shop.repository.ImportRepository;
-import com.shop.repository.UserRepository;
+import com.shop.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @CrossOrigin("*")
 @RestController
@@ -17,31 +20,48 @@ import java.util.List;
 public class ImportApi {
     @Autowired
     ImportRepository importRepository;
+    @Autowired
+    ImportDetailRepository importDetailRepository;
 
     @Autowired
-    UserRepository userRepository;
+    ProductRepository productRepository;
 
     @GetMapping
     public ResponseEntity<List<Import>> getAllImport() {
         return ResponseEntity.ok(importRepository.findAll());
     }
 
-    @PostMapping
-    public ResponseEntity<Import> post(@RequestBody Import imports) {
-        if(!importRepository.existsById(imports.getId())) {
-            return ResponseEntity.badRequest().build();
-        }
-        return ResponseEntity.ok(importRepository.save(imports));
+    @GetMapping("/getImportById/{id}")
+    public ResponseEntity<Import> getImportById(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(importRepository.findById(id).get());
     }
 
-    @PutMapping("{id}")
-    public ResponseEntity<Import> put(@PathVariable("id") Long id, @RequestBody Import imports) {
-        if(!id.equals(imports.getId())) {
+    @PostMapping
+    public ResponseEntity<Import> post(@RequestBody Import imports, @RequestBody List<ImportDetail> importDetailList) {
+        try {
+            importRepository.save(imports);
+            Long importId = imports.getId();
+            if(!importDetailList.isEmpty()) {
+                Map<Long, Integer> mapQuantityProduct = new HashMap<>();
+                for (ImportDetail importDetail : importDetailList) {
+                    importDetail.getAnImport().setId(importId);
+                    mapQuantityProduct.put(importDetail.getProduct().getProductId(), importDetail.getQuantityImport());
+                    imports.setTotalAmount(imports.getTotalAmount() + (importDetail.getPriceImport() * importDetail.getQuantityImport()));
+                }
+                importRepository.save(imports);
+                importDetailRepository.saveAll(importDetailList);
+
+                List<Product> productList = productRepository.findAllById(mapQuantityProduct.keySet());
+                for (Product product : productList) {
+                    product.setQuantity(product.getQuantity() + mapQuantityProduct.get(product.getProductId()));
+                }
+                productRepository.saveAll(productList);
+            }
+            return ResponseEntity.ok(imports);
+        }catch (Exception ex) {
+            System.out.println(ex.getMessage() + ex.getCause());
             return ResponseEntity.badRequest().build();
         }
-        if(!importRepository.existsById(id)) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(importRepository.save(imports));
     }
+
 }
