@@ -27,13 +27,13 @@ public class SendMailApi {
 		if (Urepo.existsByEmail(email)) {
 			return ResponseEntity.notFound().build();
 		}
-		sendMailOtp(email, random_otp, "Xác nhận tài khoản!");
+		sendMailOtp(email, random_otp, "Confirm your account!");
 		return ResponseEntity.ok(random_otp);
 	}
 
 	// sendmail
 	public void sendMailOtp(String email, int Otp, String title) {
-		String body = "<div>\r\n" + "        <h3>Mã OTP của bạn là: <span style=\"color:red; font-weight: bold;\">"
+		String body = "<div>\r\n" + "        <h3>Your OTP: <span style=\"color:red; font-weight: bold;\">"
 				+ Otp + "</span></h3>\r\n" + "    </div>";
 		sendMail.queue(email, title, body);
 	}

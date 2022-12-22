@@ -306,7 +306,7 @@ public class UserApi {
 		userRepository.save(user);
 		Cart c = new Cart(0L, 0.0, user.getAddress(), user.getPhone(), 0.0,user);
 		cartRepository.save(c);
-		return ResponseEntity.ok(new MessageResponse("Đăng kí thành công"));
+		return ResponseEntity.ok(new MessageResponse("Register successfully"));
 
 	}
 
@@ -325,15 +325,15 @@ public class UserApi {
 		}
 		User user = userRepository.findByEmail(email).get();
 		String token = user.getToken();
-		sendMaiToken(email,token, "Reset mật khẩu");
+		sendMaiToken(email,token, "Reset your password");
 		return ResponseEntity.ok().build();		
 		
 	}
 	
 	public void sendMaiToken(String email, String token, String title) {
 		String body = "\r\n"
-				+ "    <h2>Hãy nhấp vào link để thay đổi mật khẩu của bạn</h2>\r\n"
-				+ "    <a href=\"http://localhost:8989/forgot-password/"+token+"\">Đổi mật khẩu</a>";
+				+ "    <h2>Please click this link to change your password</h2>\r\n"
+				+ "    <a href=\"http://localhost:8989/forgot-password/"+token+"\">Change your password</a>";
 		sendMailService.queue(email, title, body);
 	}
 }
