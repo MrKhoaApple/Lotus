@@ -46,7 +46,7 @@ public class SendMailUtil {
 		}
 		content.append(BODY2);
 		content.append(
-				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng tiền: </td>\r\n"
+				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Total: </td>\r\n"
 						+ "                                                    <td width=\"25%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee; color: red;\"> "
 						+ format(String.valueOf(order.getAmount())) + " </td>");
 		content.append(BODY3);
@@ -83,7 +83,7 @@ public class SendMailUtil {
 						+ "                                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\r\n"
 						+ "                                                    <tr>\r\n"
 						+ "                                                        <td align=\"center\" valign=\"top\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 400; line-height: 24px;\">\r\n"
-						+ "                                                            <p style=\"font-weight: 800;\">Số điện thoại</p>\r\n"
+						+ "                                                            <p style=\"font-weight: 800;\">Phone number</p>\r\n"
 						+ "                                                            <p>" + order.getPhone()
 						+ "</p>\r\n" + "                                                        </td>");
 		content.append(FOOTER);
@@ -111,7 +111,7 @@ public class SendMailUtil {
 		}
 		content.append(BODY2);
 		content.append(
-				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng tiền: </td>\r\n"
+				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Total: </td>\r\n"
 						+ "                                                    <td width=\"25%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee; color: red;\"> "
 						+ format(String.valueOf(order.getAmount())) + " </td>");
 		content.append(BODY3);
@@ -148,7 +148,7 @@ public class SendMailUtil {
 						+ "                                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\r\n"
 						+ "                                                    <tr>\r\n"
 						+ "                                                        <td align=\"center\" valign=\"top\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 400; line-height: 24px;\">\r\n"
-						+ "                                                            <p style=\"font-weight: 800;\">Số điện thoại</p>\r\n"
+						+ "                                                            <p style=\"font-weight: 800;\">Phone number</p>\r\n"
 						+ "                                                            <p>" + order.getPhone()
 						+ "</p>\r\n" + "                                                        </td>");
 		content.append(FOOTER);
@@ -175,7 +175,7 @@ public class SendMailUtil {
 		}
 		content.append(BODY2);
 		content.append(
-				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng tiền: </td>\r\n"
+				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Total: </td>\r\n"
 						+ "                                                    <td width=\"25%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee; color: red;\"> "
 						+ format(String.valueOf(order.getAmount())) + " </td>");
 		content.append(BODY3);
@@ -212,7 +212,7 @@ public class SendMailUtil {
 						+ "                                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\r\n"
 						+ "                                                    <tr>\r\n"
 						+ "                                                        <td align=\"center\" valign=\"top\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 400; line-height: 24px;\">\r\n"
-						+ "                                                            <p style=\"font-weight: 800;\">Số điện thoại</p>\r\n"
+						+ "                                                            <p style=\"font-weight: 800;\">Phone number</p>\r\n"
 						+ "                                                            <p>" + order.getPhone()
 						+ "</p>\r\n" + "                                                        </td>");
 		content.append(FOOTER);
@@ -240,7 +240,7 @@ public class SendMailUtil {
 		}
 		content.append(BODY2);
 		content.append(
-				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng tiền: </td>\r\n"
+				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Total: </td>\r\n"
 						+ "                                                    <td width=\"25%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee; color: red;\"> "
 						+ format(String.valueOf(order.getAmount())) + " </td>");
 		content.append(BODY3);
@@ -277,7 +277,7 @@ public class SendMailUtil {
 						+ "                                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\r\n"
 						+ "                                                    <tr>\r\n"
 						+ "                                                        <td align=\"center\" valign=\"top\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 400; line-height: 24px;\">\r\n"
-						+ "                                                            <p style=\"font-weight: 800;\">Số điện thoại</p>\r\n"
+						+ "                                                            <p style=\"font-weight: 800;\">Phone number</p>\r\n"
 						+ "                                                            <p>" + order.getPhone()
 						+ "</p>\r\n" + "                                                        </td>");
 		content.append(FOOTER);
@@ -305,7 +305,7 @@ public class SendMailUtil {
 		}
 		content.append(BODY2);
 		content.append(
-				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Tổng tiền: </td>\r\n"
+				"<td width=\"55%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee;\"> Total: </td>\r\n"
 						+ "                                                    <td width=\"25%\" align=\"left\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 800; line-height: 24px; padding: 10px; border-top: 3px solid #eeeeee; border-bottom: 3px solid #eeeeee; color: red;\"> "
 						+ format(String.valueOf(order.getAmount())) + " </td>");
 		content.append(BODY3);
@@ -342,7 +342,7 @@ public class SendMailUtil {
 						+ "                                                <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:300px;\">\r\n"
 						+ "                                                    <tr>\r\n"
 						+ "                                                        <td align=\"center\" valign=\"top\" style=\"font-family: Open sans-serif; font-size: 20px; font-weight: 400; line-height: 24px;\">\r\n"
-						+ "                                                            <p style=\"font-weight: 800;\">Số điện thoại</p>\r\n"
+						+ "                                                            <p style=\"font-weight: 800;\">Phone number</p>\r\n"
 						+ "                                                            <p>" + order.getPhone()
 						+ "</p>\r\n" + "                                                        </td>");
 		content.append(FOOTER);
@@ -457,7 +457,7 @@ public class SendMailUtil {
 			+ "                                    <td align=\"center\" style=\"font-family: Open sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\">\r\n"
 			+ "                                        <img src=\"https://res.cloudinary.com/veggie-shop/image/upload/v1634045009/assets/checked_pudgic.png?fbclid=IwAR2aTBpMU1Gbj8pVwuU6sH1lUAUEeK2U8df1mrI4zCyMT97OnjkEIbgBSQw\" width=\"115\" height=\"110\" style=\"display: block; border: 0px;\" /><br>\r\n"
 			+ "                                        <h2 style=\"font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\"> Delivery success! </h2>\r\n"
-			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Paid successfully! Chúng tôi sẽ sớm giao hàng cho bạn!</em></p>\r\n"
+			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Paid successfully! We will deliver to you soon!</em></p>\r\n"
 			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Nice to see you soon!</em></p>\r\n"
 			+ "                                    </td>\r\n" + "                                </tr>\r\n"
 			+ "                                \r\n" + "                                <tr>\r\n"
@@ -495,8 +495,8 @@ public class SendMailUtil {
 			+ "                                <tr>\r\n"
 			+ "                                    <td align=\"center\" style=\"font-family: Open sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\">\r\n"
 			+ "                                        <img src=\"https://res.cloudinary.com/veggie-shop/image/upload/v1634046654/assets/cancellation_xhljqh.png\" width=\"115\" height=\"110\" style=\"display: block; border: 0px;\" /><br>\r\n"
-			+ "                                        <h2 style=\"font-family: Open sans-serif;font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\"> Hủy đơn hàng successfully! </h2>\r\n"
-			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Chúng tôi rất tiếc về vấn đề này, Nice to see you soon!</em></p>\r\n"
+			+ "                                        <h2 style=\"font-family: Open sans-serif;font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\"> Cancel order successfully! </h2>\r\n"
+			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>We very sorry about this problem, nice to see you soon!</em></p>\r\n"
 			+ "                                    </td>\r\n" + "                                </tr>\r\n"
 			+ "                                \r\n" + "                                <tr>\r\n"
 			+ "                                    <td align=\"left\" style=\"padding-top: 20px;\">\r\n"
