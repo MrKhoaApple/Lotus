@@ -27,9 +27,9 @@ public class SendMailServiceImplement implements SendMailService{
 
 	@Override
 	public void send(MailInfo mail) throws MessagingException, IOException {
-		// Tạo message
+		// Create message
 		MimeMessage message = sender.createMimeMessage();
-		// Sử dụng Helper để thiết lập các thông tin cần thiết cho message
+		// Use Helper to setup information for message
 		MimeMessageHelper helper = new MimeMessageHelper(message, true, "utf-8");
 		helper.setFrom(mail.getFrom());
 		helper.setTo(mail.getTo());

@@ -457,7 +457,7 @@ public class SendMailUtil {
 			+ "                                    <td align=\"center\" style=\"font-family: Open sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;\">\r\n"
 			+ "                                        <img src=\"https://res.cloudinary.com/veggie-shop/image/upload/v1634045009/assets/checked_pudgic.png?fbclid=IwAR2aTBpMU1Gbj8pVwuU6sH1lUAUEeK2U8df1mrI4zCyMT97OnjkEIbgBSQw\" width=\"115\" height=\"110\" style=\"display: block; border: 0px;\" /><br>\r\n"
 			+ "                                        <h2 style=\"font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0;\"> Delivery success! </h2>\r\n"
-			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Bạn đã Paid successfully! Chúng tôi sẽ sớm giao hàng cho bạn!</em></p>\r\n"
+			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Paid successfully! Chúng tôi sẽ sớm giao hàng cho bạn!</em></p>\r\n"
 			+ "                                        <p style=\"font-family: Open sans-serif; font-size: 18px;\"><em>Nice to see you soon!</em></p>\r\n"
 			+ "                                    </td>\r\n" + "                                </tr>\r\n"
 			+ "                                \r\n" + "                                <tr>\r\n"
